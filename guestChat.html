@@ -58,6 +58,16 @@
 			}
 		];
 
+		var firstName = 'Dakota';
+		var lastName = 'Marcy';
+		var email = 'dakota@externalChatform.com';
+		var accountID = '0014100000NbEFsAAN';
+
+		embedded_svc.settings.addCustomDetail('FirstName', firstName);
+		embedded_svc.settings.addCustomDetail('LastName', lastName);
+		embedded_svc.settings.addCustomDetail('Email', email);
+		embedded_svc.settings.addCustomDetail('AccountID', accountID);
+
 		embedded_svc.init(
 			'https://heartlandpos--uat.my.salesforce.com',
 			'https://uat-heartlandcommerce.cs4.force.com/lightningcommunity',
