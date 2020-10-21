@@ -56,11 +56,29 @@
 			  "value": "Testing from external place",
 			  "displayToAgent": true
 			}, {
-				"label": "Account ID",
+				"label": "Account Name",
 				"value": "0014100000NbEFsAAN",
 				"displayToAgent": true
 			  }
 		];
+
+		embedded_svc.settings.extraPrechatInfo = [{
+			"entityFieldMaps": [{
+				"fieldName": "FirstName",
+				"label": "First Name"
+			}, {
+				"fieldName": "LastName",
+				"label": "Last Name"
+			}, {
+				"fieldName": "Email",
+				"label": "Email"
+			}, {
+				"fieldName": "AccountId",
+				"label": "Account Name"
+			},
+			],
+			"entityName": "Contact"
+		}];
 
 		var firstName = 'CustomDetailFirst';
 		var lastName = 'CustomDetailLast';
