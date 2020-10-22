@@ -67,6 +67,7 @@
 		];
 
 		embedded_svc.settings.extraPrechatInfo = [{
+			"entityName": "Contact",
 			"entityFieldMaps": [{
 				"fieldName": "FirstName",
 				"label": "First Name"
@@ -79,9 +80,19 @@
 			}, {
 				"fieldName": "AccountId",
 				"label": "Account Name"
-			},
-			],
-			"entityName": "Contact"
+			}],
+		}, {
+			"entityName": "Account",
+			"linkToEntityName": "Case",
+			"linkToEntityField": "AccountId",
+			"saveToTranscript": "AccountId",
+			"entityFieldMaps": [{
+				"isExactMatch": true,
+				"fieldName": "AccountId",
+				"doCreate": false,
+				"doFind": true,
+				"label": "Account Name"
+			}]
 		}];
 
 		var firstName = 'CustomDetailFirst';
