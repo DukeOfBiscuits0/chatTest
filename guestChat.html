@@ -59,6 +59,10 @@
 				"label": "Account Name",
 				"value": "0014100000NbEFsAAN",
 				"displayToAgent": true
+			  }, {
+				"label": "Retail Chat",
+				"value": "TRUE",
+				"displayToAgent": true
 			  }
 		];
 
@@ -85,18 +89,18 @@
 		var email = 'dakota@externalChatform.com';
 		var accountID = '0014100000NbEFsAAN';
 
-		embedded_svc.addCustomDetail("FirstName", firstName);
-		embedded_svc.addCustomDetail("LastName", lastName);
-		embedded_svc.addCustomDetail("Email", email);
-		embedded_svc.addCustomDetail("AccountId", accountID)
+		//embedded_svc.addCustomDetail("FirstName", firstName);
+		//embedded_svc.addCustomDetail("LastName", lastName);
+		//embedded_svc.addCustomDetail("Email", email);
+		//embedded_svc.addCustomDetail("AccountId", accountID)
 
-		var detailCallBack = function (details){
-			for (var i = 0; i< details.customDetails.length; i++) {
-				console.log(details.customDetails[i].value);
-			}
-		};
+		//var detailCallBack = function (details){
+		//	for (var i = 0; i< details.customDetails.length; i++) {
+		//		console.log(details.customDetails[i].value);
+		//	}
+		//};
 
-		embedded_svc.preChatInit('https://d.la1-c1cs-ia2.salesforceliveagent.com/chat', 'detailCallback');
+		//embedded_svc.preChatInit('https://d.la1-c1cs-ia2.salesforceliveagent.com/chat', 'detailCallback');
 
 		embedded_svc.init(
 			'https://heartlandpos--uat.my.salesforce.com',
