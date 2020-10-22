@@ -90,6 +90,13 @@
 		embedded_svc.addCustomDetail("Email", email);
 		embedded_svc.addCustomDetail("AccountId", accountID)
 
+		var detailCallBack = function (details){
+			for (var i = 0; i< details.customDetails.length; i++) {
+				console.log(details.customDetails[i].value);
+			}
+		};
+
+		embedded_svc.preChatInit('https://d.la1-c1cs-ia2.salesforceliveagent.com/chat', 'detailCallback');
 
 		embedded_svc.init(
 			'https://heartlandpos--uat.my.salesforce.com',
