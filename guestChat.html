@@ -85,6 +85,11 @@
 		var email = 'dakota@externalChatform.com';
 		var accountID = '0014100000NbEFsAAN';
 
+		embedded_svc.addCustomDetail("FirstName", firstName);
+		embedded_svc.addCustomDetail("LastName", lastName);
+		embedded_svc.addCustomDetail("Email", email);
+		embedded_svc.addCustomDetail("AccountId", accountID)
+
 
 		embedded_svc.init(
 			'https://heartlandpos--uat.my.salesforce.com',
