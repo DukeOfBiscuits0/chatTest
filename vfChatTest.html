@@ -1,16 +1,6 @@
 <html>
   <body>
-    <script
-      type="text/javascript"
-      src="https://c.la1-c1cs-ia2.salesforceliveagent.com/content/g/js/50.0/deployment.js"
-    ></script>
-    <script type="text/javascript">
-      liveagent.init(
-        "https://d.la1-c1cs-ia2.salesforceliveagent.com/chat",
-        "5722M000000XZS4",
-        "00DP0000003pL4s"
-      );
-    </script>
+    ]
     <h1>Testing with Chat buttons</h1>
 
     <a
@@ -37,6 +27,43 @@
           document.getElementById("liveagent_button_offline_5732M000000XZU7")
         );
       });
+    </script>
+    <script
+      type="text/javascript"
+      src="https://c.la1-c1cs-ia2.salesforceliveagent.com/content/g/js/50.0/deployment.js"
+    ></script>
+
+    <script type="text/javascript">
+      //variables that we want to pass to Salesforce
+      var firstName = "Dakota";
+      var lastName = "Marcy";
+      var email = "dakota@preChat.com";
+      var subject = "Your subject goes here";
+      var accountId = "0014100000NbEFsAAN";
+      var chatOrigin = "Heartland Retail";
+      var product = "Digital Dining";
+
+      liveagent.details.addCustomDetail("FirstName", firstName);
+      liveagent.details.addCustomDetail("LastName", lastName);
+      liveagent.details.addCustomDetail("Email", email);
+      liveagent.details.addCustomDetail("AccountId", accountID);
+
+      var detailCallBack = function (details) {
+        for (var i = 0; i < details.customDetails.length; i++) {
+          console.log(details.customDetails[i].value);
+        }
+      };
+
+      liveagent.details.preChatInit(
+        "https://d.la1-c1cs-ia2.salesforceliveagent.com/chat",
+        "detailCallback"
+      );
+
+      liveagent.init(
+        "https://d.la1-c1cs-ia2.salesforceliveagent.com/chat",
+        "5722M000000XZS4",
+        "00DP0000003pL4s"
+      );
     </script>
   </body>
 </html>
