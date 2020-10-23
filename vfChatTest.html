@@ -43,10 +43,10 @@
       var chatOrigin = "Heartland Retail";
       var product = "Digital Dining";
 
-      liveagent.details.addCustomDetail("FirstName", firstName);
-      liveagent.details.addCustomDetail("LastName", lastName);
-      liveagent.details.addCustomDetail("Email", email);
-      liveagent.details.addCustomDetail("AccountId", accountID);
+      liveagent.addCustomDetail("FirstName", firstName);
+      liveagent.addCustomDetail("LastName", lastName);
+      liveagent.addCustomDetail("Email", email);
+      liveagent.addCustomDetail("AccountId", accountID);
 
       var detailCallBack = function (details) {
         for (var i = 0; i < details.customDetails.length; i++) {
