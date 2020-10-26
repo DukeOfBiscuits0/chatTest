@@ -1,6 +1,29 @@
 <html>
+  <head>
+    <script type="text/javascript">
+      (function() { 
+        function handlePageLoad() {
+          var endpointMatcher = new RegExp("[\\?\\&]endpoint=([^&#]*)");
+          document.getElementById('prechatForm').setAttribute('action',
+          decodeURIComponent(endpointMatcher.exec(document.location.search)[1]));
+        } 
+        if (window.addEventListener) {
+          window.addEventListener('load', handlePageLoad, false);
+        } else { 
+          window.attachEvent('onload', handlePageLoad, false);
+        }
+      })(); 
+    </script>
+  </head>
   <body>
     <h1>Testing with Chat buttons</h1>
+
+    <input type="hidden" name="liveagent.prechat.findorcreate.map:Contact" value="FirstName,Name;LastName,LastName;Email,Email;" />
+
+    <input type="hidden" name="liveagent.prechat.findorcreate.map.doFind:Contact" value="Email,true;" />
+    <input type="hidden" name="liveagent.prechat.findorcreate.map.isExactMatch:Contact" value="Email,true;" />
+
+    <input type="hidden" name="liveagent.prechat.findorcreate.map.map.docreate:Contact" value="FirstName,true;LastName,true;Email,true" />
 
     <a
       id="liveagent_button_online_5732M000000XZU7"
@@ -60,7 +83,7 @@
       };
 
       liveagent.details.preChatInit(
-        "https://d.la1-c1cs-ia2.salesforceliveagent.com/chat/rest/",
+        "https://d.la1-c1cs-ia2.salesforceliveagent.com/chat",
         "detailCallback"
       );
 
