@@ -56,17 +56,6 @@
       liveagent.addCustomDetail("Email", email);
       liveagent.addCustomDetail("AccountId", accountId);
 
-      var detailCallBack = function (details) {
-        for (var i = 0; i < details.customDetails.length; i++) {
-          console.log(details.customDetails[i].value);
-        }
-      };
-
-      liveagent.details.preChatInit(
-        "https://d.la1-c1cs-ia2.salesforceliveagent.com/chat",
-        "detailCallback"
-      );
-
       liveagent.init(
         "https://d.la1-c1cs-ia2.salesforceliveagent.com/chat",
         "57241000000LQ4O",
