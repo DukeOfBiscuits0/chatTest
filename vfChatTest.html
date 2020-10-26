@@ -1,25 +1,6 @@
 <html>
   <head>
-    <script type="text/javascript">
-      (function () {
-        function handlePageLoad() {
-          var endpointMatcher = new RegExp("[\\?\\&]endpoint=([^&#]*)");
-          document
-            .getElementById("prechatForm")
-            .setAttribute(
-              "action",
-              decodeURIComponent(
-                endpointMatcher.exec(document.location.search)[1]
-              )
-            );
-        }
-        if (window.addEventListener) {
-          window.addEventListener("load", handlePageLoad, false);
-        } else {
-          window.attachEvent("onload", handlePageLoad, false);
-        }
-      })();
-    </script>
+    
   </head>
   <body>
     <h1>Testing with Chat buttons</h1>
@@ -49,7 +30,7 @@
         );
       });
     </script>
-    
+
     <script
       type="text/javascript"
       src="https://c.la1-c1cs-ia2.salesforceliveagent.com/content/g/js/50.0/deployment.js"
