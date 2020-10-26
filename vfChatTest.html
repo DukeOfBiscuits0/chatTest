@@ -1,41 +1,66 @@
 <html>
   <head>
     <script type="text/javascript">
-      (function() { 
+      (function () {
         function handlePageLoad() {
           var endpointMatcher = new RegExp("[\\?\\&]endpoint=([^&#]*)");
-          document.getElementById('prechatForm').setAttribute('action',
-          decodeURIComponent(endpointMatcher.exec(document.location.search)[1]));
-        } 
-        if (window.addEventListener) {
-          window.addEventListener('load', handlePageLoad, false);
-        } else { 
-          window.attachEvent('onload', handlePageLoad, false);
+          document
+            .getElementById("prechatForm")
+            .setAttribute(
+              "action",
+              decodeURIComponent(
+                endpointMatcher.exec(document.location.search)[1]
+              )
+            );
         }
-      })(); 
+        if (window.addEventListener) {
+          window.addEventListener("load", handlePageLoad, false);
+        } else {
+          window.attachEvent("onload", handlePageLoad, false);
+        }
+      })();
     </script>
   </head>
   <body>
     <h1>Testing with Chat buttons</h1>
 
-    <input type="hidden" name="liveagent.prechat.findorcreate.map:Contact" value="FirstName,Name;LastName,LastName;Email,Email;" />
+    <form method="post" id="prechatForm">
+      <input
+        type="hidden"
+        name="liveagent.prechat.findorcreate.map:Contact"
+        value="FirstName,Name;LastName,LastName;Email,Email;"
+      />
 
-    <input type="hidden" name="liveagent.prechat.findorcreate.map.doFind:Contact" value="Email,true;" />
-    <input type="hidden" name="liveagent.prechat.findorcreate.map.isExactMatch:Contact" value="Email,true;" />
+      <input
+        type="hidden"
+        name="liveagent.prechat.findorcreate.map.doFind:Contact"
+        value="Email,true;"
+      />
+      <input
+        type="hidden"
+        name="liveagent.prechat.findorcreate.map.isExactMatch:Contact"
+        value="Email,true;"
+      />
 
-    <input type="hidden" name="liveagent.prechat.findorcreate.map.map.docreate:Contact" value="FirstName,true;LastName,true;Email,true" />
+      <input
+        type="hidden"
+        name="liveagent.prechat.findorcreate.map.map.docreate:Contact"
+        value="FirstName,true;LastName,true;Email,true"
+      />
 
-    <a
-      id="liveagent_button_online_5732M000000XZU7"
-      href="javascript://Chat"
-      style="display: none"
-      onclick="liveagent.startChat('5732M000000XZU7')"
-    >
-      Chat Now
-    </a>
-    <div id="liveagent_button_offline_5732M000000XZU7" style="display: none">
-      <h2>Offline chat here</h2>
-    </div>
+      <a
+        id="liveagent_button_online_5732M000000XZU7"
+        href="javascript://Chat"
+        style="display: none"
+        onclick="liveagent.startChat('5732M000000XZU7')"
+      >
+        Chat Now
+      </a>
+      <div id="liveagent_button_offline_5732M000000XZU7" style="display: none">
+        <h2>Offline chat here</h2>
+      </div>
+    </form>
+
     <script type="text/javascript">
       if (!window._laq) {
         window._laq = [];
