@@ -1,20 +1,22 @@
 <html>
   <head>
-    
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
   </head>
   <body>
-    <h1>Testing with Chat buttons</h1>
 
-    <a
-      id="liveagent_button_online_573P00000004HZf"
-      href="javascript://Chat"
-      style="display: none"
-      onclick="liveagent.startChat('573P00000004HZf')"
-      >Online Chat Content</a
-    >
-    <div id="liveagent_button_offline_573P00000004HZf" style="display: none">
-      Offline Chat Content
-    </div>
+    <button class="mdc-button mdc-button--raised" onclick="liveagent.startChat('573P00000004HZf')" href="javascript://Chat" id="liveagent_button_online_573P00000004HZf" style="display: none">
+      <div class="mdc-button__ripple"></div>
+      <span class="mdc-button__label">Chat Now</span>
+    </button>
+
+    
+
+    <button class="mdc-button mdc-button--raised" disabled>
+      <div class="mdc-button__ripple"></div>
+      <span class="mdc-button__ripple">No Agents Available</span>
+    </button>
+
     <script type="text/javascript">
       if (!window._laq) {
         window._laq = [];
