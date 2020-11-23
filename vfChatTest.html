@@ -8,6 +8,7 @@
     <!-- Insert everything below this for the chat component to work, styles in the Head tag are for the https://material.io/ classes used for the buttons. -->
 
     <!-- this button only appears if there are agents online in Salesforce with the corresponding skill -->
+    <div id="chatButtonsContainer" >
     <button class="mdc-button mdc-button--outlined" onclick="liveagent.startChat('573P00000004HZf')" href="javascript://Chat" id="liveagent_button_online_573P00000004HZf" style="display: none">
       <div class="mdc-button__ripple"></div>
       <span class="mdc-button__label">Chat Now</span>
@@ -17,6 +18,7 @@
       <div class="mdc-button__ripple"></div>
       <span class="mdc-button__label">No Agents Available</span>
     </button>
+  </div>
 
     <!-- to replace the buttons above with the default way of initiating a chat (Just hyperlinks) use the following 
         
@@ -92,6 +94,21 @@
       // This is used to set the Display name of the user requesting a chat
       // if not set the Agent sees "Visitor"
       liveagent.setName(firstName + ' ' + lastName[0] + '.');
+
+
+      // Show/Hide the buttons on the page
+      function toggleButtonVisibility() {
+        var buttonContainer = getElementById("chatButtonsContainer");
+
+        // check both buttons since either could be displayed based on agent availability
+        if (chatButtonsContainer.style.display === "none") {
+          // reset to no style
+          chatButtonsContainer.style.display = "";
+        } else {
+          chatButtonsContainer.style.display = "none";
+        }
+
+      }
     </script>
   </body>
 </html>
