@@ -8,7 +8,7 @@
     <!-- Insert everything below this for the chat component to work, styles in the Head tag are for the https://material.io/ classes used for the buttons. -->
 
     <!-- this button only appears if there are agents online in Salesforce with the corresponding skill -->
-      <button class="mdc-button mdc-button--outlined" onclick="liveagent.startChat('573P00000004HZf')">
+      <button class="mdc-button mdc-button--outlined" onclick="liveagent.startChatWithWindow('573P00000004HZf', 'ChatWindow')">
         <div class="mdc-button__ripple"></div>
         <span class="mdc-button__label">Chat Now</span>
       </button>
@@ -17,6 +17,10 @@
         <div class="mdc-button__ripple"></div>
         <span class="mdc-button__label">No Agents Available</span>
       </button>
+
+      <div name="ChatWindow">
+        CHAT GOES HERE?
+      </div>
  
     <!-- to replace the buttons above with the default way of initiating a chat (Just hyperlinks) use the following 
         
