@@ -135,6 +135,41 @@
         }; //Sets the auto-population of pre-chat form fields
         //embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
         //embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
+
+        embedded_svc.snippetSettingsFile.extraPrechatInfo = [{
+          "entityName":"Contact",
+          "entityFieldMaps": [{
+              "doCreate":false,
+              "doFind":false,
+              "fieldName":"LastName",
+              "isExactMatch":false,
+              "label":"Last Name"
+          }, 
+          {
+              "doCreate":false,
+              "doFind":false,
+              "fieldName":"FirstName",
+              "isExactMatch":false,
+              "label":"First Name"
+          }, 
+          {
+              "doCreate":false,
+              "doFind":false,
+              "fieldName":"Email",
+              "isExactMatch":false,
+              "label":"Email"
+          }]
+      },
+      {
+          "entityName":"Case",
+          "entityFieldMaps": [{
+              "doCreate":false,
+              "doFind":false,
+              "fieldName":"Subject",
+              "isExactMatch":false,
+              "label":"Subject"
+          }]
+      }];
     
         embedded_svc.settings.enabledFeatures = ['LiveAgent'];
         embedded_svc.settings.entryFeature = 'LiveAgent';
