@@ -116,7 +116,7 @@
         {"label": "Subject", "value": subject},
         {"label": "AccountID", "value": accountId}
       ];
-      var payloadString = variablePayload.toString();
+      var payloadString = JSON.stringify(variablePayload);
 
       var initESW = function(gslbBaseURL) {
         embedded_svc.settings.displayHelpButton = true; //Or false
