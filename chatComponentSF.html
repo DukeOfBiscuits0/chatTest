@@ -1,8 +1,4 @@
 <html>
-  <head>
-    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
-    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-  </head>
   <body>
     <!-- Embedded Service Starts Here -->
     <!-- This code should be injected before the closing body tag of each page -->
@@ -24,7 +20,7 @@
       var firstName = "Marcy";
       var lastName = "Dakota2";
       var email = "dakota@preChat.com";
-      var subject = "Your subject goes here";
+      var subject = "Request for Support (CHAT TEST PAGE)";
       var accountId = "0014100000NbEFsAAN";
       var chatOrigin = "Heartland Retail";
       var product = "TESTING";
@@ -43,29 +39,17 @@
       var payloadString = JSON.stringify(variablePayload);
 
       var initESW = function(gslbBaseURL) {
-        embedded_svc.settings.displayHelpButton = true; //Or false
-        embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
+        embedded_svc.settings.displayHelpButton = true; 
+        embedded_svc.settings.language = ''; 
     
-        //embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
-        //embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
-    
-        //embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
-        //embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
-    
-        // Settings for Chat
-        //embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
-          // Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
-          // Returns a valid button ID.
-        //};
+        
         embedded_svc.settings.prepopulatedPrechatFields = {
           FirstName: firstName,
           LastName: lastName,
           Email: email,
           Subject: subject,
           AccountId: accountId
-        }; //Sets the auto-population of pre-chat form fields
-        //embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
-        //embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
+        }; 
 
         // set data to pass in through prechat
         embedded_svc.settings.extraPrechatFormDetails = [{
